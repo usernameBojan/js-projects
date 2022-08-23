@@ -1,0 +1,48 @@
+body {
+    overflow-x: hidden
+}
+
+span {
+    color: yellow; 
+    cursor: pointer;
+    margin-top: 50rem;
+    margin: auto;
+}
+
+#linksDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.link {
+    margin: 2.5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.medium {
+    margin-top: 20px;
+    width: 300px;
+    height: 130px;
+}
+
+.medium {
+    height: 40vh;
+}
+
+#titleDiv {
+    margin-bottom: 75px;
+}
+
+#allMoviesDiv {
+    margin-top: 50px;
+}

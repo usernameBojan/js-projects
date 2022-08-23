@@ -1,0 +1,74 @@
+body {
+    color: white;
+    overflow-x: hidden;
+}
+ 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.medium {
+    margin-top: 20px;
+    width: 300px;
+    height: 130px;
+}
+ 
+.medium {
+    height: 40vh;
+}
+ 
+.small {
+    height: 30vh;
+    margin-top: 175px;
+}
+ 
+.pointer {
+    cursor: pointer;
+}
+
+.link {
+    margin: 2.5px;
+}
+
+.botDiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ 
+.different {
+    color: yellow;
+    font-weight: 800;
+}
+
+#linksDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+#titleDiv {
+    margin-bottom: 75px;
+}
+ 
+#btnNext, #btnPrev {
+    display: none;
+}
+
+#result {
+    display: none;
+}
+
+#loader {
+    display: none;
+    width: 80px;
+}
+ 
+#btnPeople:hover {
+    border: 2px solid transparent;
+}
+ 
+#btnShips:hover {
+    border: 2px solid transparent;
+}
+ 

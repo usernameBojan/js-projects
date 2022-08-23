@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Get students info</title>    
+</head>
+<body>
+    <h2 class="container col-3" style="margin-bottom: 75px">Get student info</h2>
+    <div id="mainDiv">
+        <div id="btnsDiv" class="container">
+            <button class="btn btn-primary btn-lg btn-block">Click here to get data of all students with an average grade higher than 3</button>
+            <button class="btn btn-primary btn-lg btn-block">Click here to get names of all female students with an average grade of 5</button>
+            <button class="btn btn-primary btn-lg btn-block">Click here to get data of all male students who live in Skopje and are over 18 years old</button>
+            <button class="btn btn-primary btn-lg btn-block">Click here to get the average grades of all female students over the age of 24</button>
+            <button class="btn btn-primary btn-lg btn-block">Click here to get data of all male students with a name starting with B and average grade over 2</button>
+        </div>
+        <div id="dataDivs">
+            <div id="avgHigher3Div" class="container">
+                <table class="table table-dark">
+                    <thead>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>City</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Average Grade</th>
+                    </thead>
+                    <tbody id="avgHigher3tB"></tbody>
+                </table>              
+            </div>   
+            <div id="femaleAvg5Div" class="container">
+                <table class="table table-dark">
+                    <thead>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Average Grade</th>
+                    </thead>
+                    <tbody id="femaleAvg5tB"></tbody>
+                </table>  
+            </div>   
+            <div id="maleSkopje18Div" class="container">
+                <table class="table table-dark">
+                    <thead>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>City</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </thead>
+                    <tbody id="maleSkopje18tB"></tbody>
+                </table>  
+            </div>   
+            <div id="avgFemale24Div" class="container">
+                <table class="table table-dark">
+                    <thead>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Average Grade</th>
+                    </thead>
+                    <tbody id="avgFemale24tB"></tbody>
+                </table> 
+            </div>   
+            <div id="maleNameBDiv" class="container">
+                <table class="table table-dark">
+                    <thead>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>City</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Average Grade</th>
+                    </thead>
+                    <tbody id="maleNameBtB"></tbody>
+                </table> 
+            </div> 
+        </div>  
+        <button id="hideBtn" class="container btn btn-outline-danger btn-lg btn-block">Hide data</button>           
+    </div>
+    <script src="./homeworkHof.js"></script>
+</body>
+</html>

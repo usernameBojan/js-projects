@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="icon" type="image/x-icon" href="../weatherApp/assets/imgs/sunLogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../weatherApp/assets/style/main.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <header>
+            <nav class="navbar navbar-white bg-white">
+                <span>
+                    <img src="../weatherApp/assets/imgs/sunLogo.png" alt="sun" height="150" width="180">
+                    <p><a href="../weatherApp/index.html"><strong>WeatherNow</strong></a></p>
+                </span>
+                <span class="navbar-brand mb-0 h2 pointer" id="home">Home</span>
+                <span class="navbar-brand mb-0 h2 pointer" id="hourly">Hourly</span>
+                <span class="navbar-brand mb-0 h2 pointer" id="weekly">Weekly</span>
+                <span class="navbar-brand mb-0 h1">
+                    <input type="search" id="searchBar">
+                    <button id="searchBtn" type="button" class="btn btn-outline-primary">Search</button>
+                </span>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container col-12" id="errorDiv">
+                <h3> <img src="../weatherApp/assets/imgs/sadSunAndClouds.jpg" alt="" width="275"
+                        height="250"> Wrong spelling or connection error, please try again. <img
+                        src="../weatherApp/assets/imgs/sadSunAndClouds.jpg" alt="" width="275" height="250"></h3>
+            </div>
+            <div class="container col-4" id="homeDiv">
+                <h2>Welcome to WeatherNow</h2>
+                <p><i>Get the fastest and most accurate weather info</i></p>
+            </div> <br>
+            <div class="container" id="homeDivWithData">
+                <div class="row">
+                    <div class="container col-2">
+                        <h4 id="cityName"></h4>
+                    </div>
+                </div> <br>
+                <div class="row">
+                    <div class="container col-4">
+                        <span id="currentTemp" class="pointer"></span>
+                        <span id="feelsLike" class="pointer"></span>
+                        <span id="sunrise"></span>
+                        <span id="sunset"></span>
+                    </div>
+                </div> <br>
+                <div class="row">
+                    <div class="container col-2">
+                        <span id="weatherStatus"></span>
+                        <span id="weatherImg"></span>
+                    </div>
+                </div> <br> <br>
+                <div class="row">
+                    <div class="container col-3" id="maxTemp"></div>
+                    <div class="container col-3" id="maxHumd"></div>
+                </div>
+                <div class="row">
+                    <div class="container col-3" id="avgTemp"></div>
+                    <div class="container col-3" id="avgHumd"></div>
+                </div>
+                <div class="row">
+                    <div class="container col-3" id="lowTemp"></div>
+                    <div class="container col-3" id="lowHumd"></div>
+                </div> <br> <br>
+                <div class="row">
+                    <div class="container col-8">
+                        <p id="msg">
+                            <em>Highest, lowest and average values of temperature and humidity refer to
+                                temperatures in the next five days
+                            </em>
+                        </p>
+                    </div>
+                </div>
+                <br> <br> <br>
+                <div class="container col-6" id="warmestDay"></div> <br>
+                <div class="container col-6" id="coldestDay"></div>
+            </div>
+            <div id="hourlyDiv">
+                <table class="table table-info">
+                    <thead>
+                        <th>#</th>
+                        <th>City</th>
+                        <th>Description of weather</th>
+                        <th>Date and Time</th>
+                        <th id="tempTableHeader" class="pointer">Temperature (Feels like) <br> <i><small>Click to convert to
+                                    °F/°C</small></i></th>
+                        <th>Humidity</th>
+                        <th>Wind Speed</th>
+                    </thead>
+                    <tbody id="tBodyHourly"></tbody>
+                </table>
+            </div>
+            
+            <div id="weeklyDiv">
+                <br><br><br>
+                <table class="table table-info">
+                    <thead>
+                        <th>Day</th>
+                        <th>City</th>
+                        <th>Description</th>
+                        <th id="weeklyMax" class="pointer">Highest(Feels like)<br> <i><small>Click to convert to °F/°C</small></i></th>
+                        <th id="weeklyMin" class="pointer">Lowest(Feels like)<br> <i><small>Click to convert to °F/°C</small></i></th>
+                        <th id="weeklyAvg" class="pointer">Average<br> <i><small>Click to convert to FH/C</small></i></th>
+                        <th>Humidity(high, low, average)</th>
+                    </thead>
+                    <tbody id="tBodyWeekly"></tbody>
+                </table>
+            </div>
+            <div id="aboutDiv">
+                <p>This app is a free weather forecast app created as an exercise for JavaScript workshop for the
+                    subject Advanced JavaScript for the Seavus Academy for Web Development 2021/2022
+                </p>
+                <p>The weather data and information used and shown in this app are gathered from 
+                    <a href="https://openweathermap.org/" target="_blank" title="Click to open in new tab" id="open-weather-link">Open Weather Map</a>
+                    free subscription plan which provides weather forecast information for the next five days in time span of three hours.
+                </p>
+                <p>This app serves solely for educational and exercising purposes, for that reason accuracy and credibility of the shown information can not be guaranteed.</p>
+                <p>Creater of this app is Bojan Trpchevski, a web development student at SEDC.</p>
+                <p>Phone: 011-235-813</p>
+                <p>Mail: <a href="mailto:bojan@rocketship.com">bojan@rocketship.com</a></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy;2022 WeatherNow. All rights reserved.</p>
+
+            <p class="pointer" id="about">About</p>
+
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../weatherApp/script/app.js"></script>
+</body>
+
+</html>

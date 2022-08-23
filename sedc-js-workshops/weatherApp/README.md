@@ -1,0 +1,2 @@
+This Weather App project begun as an exercise for workshop for the subject Advanced JavaScript Development for the Seavus Academy for Web Development 2021/2022 with tasks only referring to being a SPA and having only home, hourly weather and about. I later upgraded its features, in particular the parts of the temperature conversion, interval showing of data from different cities until the user searches for a city and having a div with weekly data (in this case 4 days because I’m using a free API which shows data only for the next 4-5 days).
+

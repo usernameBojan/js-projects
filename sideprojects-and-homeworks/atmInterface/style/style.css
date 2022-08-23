@@ -1,0 +1,80 @@
+header {
+    height: 5%;
+    display: none;
+}
+
+h2 {
+    margin: 250px 400px 250px 360px;
+}
+
+button {
+    font-size: x-large;
+}
+
+#langDiv {
+    margin: auto;
+    font-size: x-large;
+    display: block;
+}
+
+#mainDiv {
+    height: 700px;
+    width: 70%;
+    background-color: cornflowerblue;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#sdcDiv {
+    margin: auto;
+    display: none;
+}
+
+.sdcError {
+    color: red;
+    display: none;
+}
+
+#selectDiv {
+    font-size: x-large;
+    display: none;
+    margin: auto;
+}
+
+.options {
+    display: block;
+}
+
+.optionDivs {
+    display: none;
+}
+
+.balanceAnsw {
+    display: none;
+}
+
+#depositDiv {
+    margin: 250px 240px 80px 250px;;
+}
+
+#withdrawalDiv {
+    margin: 250px 240px 80px 250px;;
+}
+
+.depositAnswer {
+    display: none;
+}
+
+.withdrawAnswer {
+    display: none;
+}
+
+.fourAttemptsLogin {
+    display: none;
+}
+
+#backToOpts {
+    margin: auto;
+    display: none;
+}

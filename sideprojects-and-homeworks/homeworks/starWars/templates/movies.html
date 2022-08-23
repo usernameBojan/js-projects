@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/global.css">
+    <link rel="stylesheet" href="../assets/moviesStyle.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>STAR WARS | Skywalker Saga</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <a href="/starWars/index.html">
+            <img src="../assets/img/logo.png" alt="Star wars logo" class="center medium">
+        </a>
+
+        <div id="titleDiv">
+            <h3 class="container col-md-2 text-info">Skywalker Saga</h3>
+        </div>
+
+        <div id="linksDiv">
+            <a class="btn btn-outline-warning link" href="./peopleAndShips.html" role="button">People and Ships</a>
+            <a class="btn btn-outline-warning link" href="./about.html" role="button">About</a>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <span class="mb-1 h1">All movies</span>
+            <span class="mb-1 h1">By trilogy</span>   
+        </nav>
+        <div id="allMoviesDiv" class="hidden">
+            <div>
+                <button class="btn btn-outline-warning">Show movies by release date</button>
+            </div> <br>
+            <div>
+                <button class="btn btn-outline-warning">Show by in-universe chronological order</button>
+            </div> 
+            <div id="sortedByDate" class="container hidden">
+                <table class="table table-info table-borderless"></table>
+            </div>
+            <div id="sortedByOrder" class="container hidden">
+                <table class="table table-info table-borderless"></table>
+            </div>
+            <button class="container btn btn-danger">Hide</button>
+        </div>    
+        <div id="trilogiesDiv" class="hidden">
+            <button class="btn btn-outline-warning">Show Original Trilogy</button> <br>
+            <button class="btn btn-outline-warning">Show Prequel Trilogy</button> <br>
+            <button class="btn btn-outline-warning">Show Sequel Trilogy</button> <br>
+            <button class="btn btn-outline-warning">Show all</button> <br>
+            <div id="originalTrilogyDiv" class="container hidden">
+                <table class="table table-info table-borderless"></table>
+            </div>
+            <div id="prequelTrilogyDiv" class="container hidden" >
+                <table class="table table-info table-borderless"></table>
+            </div>
+            <div id="sequelTrilogyDiv" class="container hidden">
+                <table class="table table-info table-borderless"></table>
+            </div> <br>
+            <button class="container btn btn-danger">Hide</button>
+        </div>
+        
+    </div> 
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+    <script src="../scripts/moviesSw.js"></script>
+</body>
+</html>

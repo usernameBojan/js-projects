@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudobank ATM Interface</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div id="mainDiv">
+
+        <header>
+            <h5 id="welcomeMsg"></h5>
+            <h6 id="clientName"></h6>
+            <h6 id="date"></h6>
+        </header>
+        
+        <div id="langDiv">
+            <p>Select your language</p>
+            <button class=".langBtns">English</button>
+            <button class=".langBtns">Македонски</button>
+            <button class=".langBtns">Español</button>
+        </div>
+
+        <div id="sdcDiv">
+            <p></p>
+            <input type="password">
+            <button id="sdcBtn" class="fourAttemptsLogin">✔</button>
+            <p id="errorEng" class="sdcError"></p>
+            <p id="errorMk" class="sdcError"></p>
+            <p id="errorEsp" class="sdcError"></p>
+        </div>
+
+        <div id="selectDiv">
+            <p></p>
+            <button class="options"></button><br>
+            <button class="options"></button><br>
+            <button class="options"></button><br>
+            <button class="options"></button><br>
+        </div>
+
+        <div id="balanceDiv" class="optionDivs">
+            <h2 id="balanceEng" class="balanceAnsw"></h2>
+            <h2 id="balanceMk" class="balanceAnsw"></h2>
+            <h2 id="balanceEsp" class="balanceAnsw"></h2>
+        </div>
+
+        <div id="depositDiv" class="optionDivs">
+            <label for="depositAmount" id="depositLabel" class="depositOpts"></label>
+            <input type="number" id="depositAmount" name="depositAmount" class="depositOpts" maxlength="5">
+            <button id="depositBtn" class="depositOpts">✔</button>
+            <p id="engDeposit" class="depositAnswer"></p>
+            <p id="mkDeposit" class="depositAnswer"></p>
+            <p id="espDeposit" class="depositAnswer"></p>
+        </div>
+
+        <div id="withdrawalDiv" class="optionDivs">
+            <label for="withdrawAmount" id="withdrawLabel" class="withdrawOpts"></label>
+            <input type="number" id="withdrawAmount" name="withdrawAmount" class="withdrawOpts" maxlength="5">
+            <button id="withdrawBtn" class="withdrawOpts">✔</button>
+            <p id="engWithdraw" class="withdrawAnswer"></p>
+            <p id="mkWithdraw" class="withdrawAnswer"></p>
+            <p id="espWithdraw" class="withdrawAnswer"></p>
+        </div>
+
+        <button id="backToOpts"></button>
+    </div>
+    
+    <script type="module" src="../atmInterface/scripts/app.js"></script>
+
+</body>
+</html>

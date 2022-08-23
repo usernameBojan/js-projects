@@ -1,0 +1,57 @@
+#searchDiv {
+    margin-top: 2.25rem;
+    width: 33%;
+    margin-bottom: 2.75rem;
+}
+
+#infoDiv {
+    margin-top: 1rem;
+    text-align: center;
+    color:cornflowerblue;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#imgDiv {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.description {
+    display: none;
+}
+
+.descr-txt {
+    font-size: 14.5px;
+}
+
+#card {
+    border-radius: 12.5px;
+    display: flex;
+    flex-flow: column wrap;
+    width: 28em; 
+    height: 26rem; 
+    border: solid 1px gray; 
+    margin: 20px auto;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.card-img-top {
+    padding: 12.5px;
+    padding-bottom: 0px;
+    height: 13rem;
+}
+
+.list-group-item {
+    background-color: whitesmoke;
+}    
+
+.alert {
+    display: none;
+    text-align: center;
+}

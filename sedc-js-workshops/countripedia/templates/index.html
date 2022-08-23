@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../countripedia/style/img/rotating-earth.gif">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style/style.css">
+  <title>Countripedia</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><b>Countripedia</b></a>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Filter countries by continents
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><button class="dropdown-item continent">Europe</button></li>
+            <li><button class="dropdown-item continent">Americas</button></li>
+            <li><button class="dropdown-item continent">Oceania</button></li>
+            <li><button class="dropdown-item continent">Asia</button></li>
+            <li><button class="dropdown-item continent">Africa</button></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Filter countries by languages
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><button id="engBtn" class="dropdown-item langbtn">Show English speaking countries</button></li>
+            <li><button id="spaBtn" class="dropdown-item langbtn">Show Spanish speaking countries</button></li>
+            <li><button id="porBtn" class="dropdown-item langbtn">Show Portugese speaking countries</button></li>
+            <li><button id="arabBtn" class="dropdown-item langbtn">Show Arabic speaking countries</button></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Filter countries by currencies
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><button id="euroBtn" class="dropdown-item currency-btn">Show countries using Euro</button></li>
+            <li><button id="gbpBtn" class="dropdown-item currency-btn">Show countries using British pound
+                sterling</button></li>
+            <li><button id="usdBtn" class="dropdown-item currency-btn">Show countries using US Dollar</button></li>
+            <li><button id="audBtn" class="dropdown-item currency-btn">Show countries using Australian Dollar</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Filter countries by regional blocs
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><button id="euBtn" class="dropdown-item org">EU</button></li>
+            <li><button id="eftaBtn" class="dropdown-item org">EFTA</button></li>
+            <li><button id="caricomBtn" class="dropdown-item org">CARICOM</button></li>
+            <li><button id="paBtn" class="dropdown-item org">PA</button></li>
+            <li><button id="auBtn" class="dropdown-item org">AU</button></li>
+            <li><button id="usanBtn" class="dropdown-item org">USAN</button></li>
+            <li><button id="eeuBtn" class="dropdown-item org">EEU</button></li>
+            <li><button id="aseanBtn" class="dropdown-item org">ASEAN</button></li>
+            <li><button id="caisBtn" class="dropdown-item org">CAIS</button></li>
+            <li><button id="ceftaBtn" class="dropdown-item org">CEFTA</button></li>
+            <li><button id="naftaBtn" class="dropdown-item org">NAFTA</button></li>
+            <li><button id="saarcBtn" class="dropdown-item org">SAARC</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <div id="infoDiv">
+      <p><em>
+          Countripedia is a free and easy to use web app developed as task for JS workshop at SEDC. <br>
+          Search by name bellow or select through one of our filtered parametars to get basic info about any country or
+          territory you wish.
+        </em></p>
+    </div>
+
+    <div id="searchDiv" class="container input-group">
+      <input id="searchBar" type="search" class="form-control bg-light" placeholder="Search for a country"
+        aria-label="Search for a country" aria-describedby="button-addon2">
+      <button class="btn btn-outline-primary" type="button" id="searchBtn">Search</button>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+      There is not such country with that name, please check your spelling and try again.
+    </div>   
+
+    <div id="imgDiv">
+      <img src="../style/img/rotating-earth.gif" alt="Rotating Globe">
+    </div>
+
+    <div id="EuropedescrDiv" class="container description">
+      <h5>Europe</h5>
+      <p class="descr-txt">
+        Europe is a continent, also recognised as a part of Eurasia, located entirely in the Northern Hemisphere and
+        mostly in the Eastern Hemisphere.
+        Comprising the westernmost peninsulas of Eurasia, it shares the continental landmass of Afro-Eurasia with both
+        Asia and Africa.
+        It is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west, the Mediterranean Sea to the
+        south and Asia to the east.
+        Europe is commonly considered to be separated from Asia by the watershed of the Ural Mountains, the Ural River,
+        the Caspian Sea, the Greater Caucasus, the Black Sea and the waterways of the Turkish Straits.
+        Although much of this border is over land, Europe is almost always recognised as its own continent because of
+        its great physical size and the weight of its history and traditions.
+        Europe covers about 10.18 million km2 (3.93 million sq mi), or 2% of Earth's surface (6.8% of land area), making
+        it the second-smallest continent (using the seven-continent model).
+        Politically, Europe is divided into about fifty sovereign states, of which Russia is the largest and most
+        populous, spanning 39% of the continent and comprising 15% of its population.
+        Europe had a total population of about 746 million (about 10% of the world population) in 2018. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Europe" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="AmericasdescrDiv" class="container description">
+      <h5>Americas</h5>
+      <p class="descr-txt">
+        The Americas, which are sometimes collectively called America, are a landmass comprising the totality of North and South America. 
+        The Americas make up most of the land in Earth's Western Hemisphere and comprise the New World.
+        Along with their associated islands, the Americas cover 8% of Earth's total surface area and 28.4% of its land area. 
+        The topography is dominated by the American Cordillera, a long chain of mountains that runs the length of the west coast. 
+        The flatter eastern side of the Americas is dominated by large river basins, such as the Amazon, St. Lawrence River–Great Lakes basin, Mississippi, and La Plata. 
+        Since the Americas extend 14,000 km (8,700 mi) from north to south, the climate and ecology vary widely, from the arctic tundra of Northern Canada, Greenland, and Alaska,
+        to the tropical rain forests in Central America and South America. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Americas" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="OceaniadescrDiv" class="container description">
+      <h5>Oceania</h5>
+      <p class="descr-txt">
+        Oceania is a geographical region that includes Australasia, Melanesia, Micronesia, and Polynesia.
+        Spanning the Eastern and Western hemispheres, Oceania is estimated to have a land area of 8,525,989 square
+        kilometres (3,291,903 sq mi) and a population of over 41 million.
+        When compared with the continents, the region of Oceania is the smallest in land area and the second smallest in
+        population after Antarctica.
+        Its six major population centres are Sydney, Melbourne, Brisbane, Perth, Auckland, and Adelaide. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Oceania" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="AsiadescrDiv" class="container description">
+      <h5>Asia</h5>
+      <p class="descr-txt">
+        Asia is Earth's largest and most populous continent, located primarily in the Eastern and Northern Hemispheres.
+        It shares the continental landmass of Eurasia with the continent of Europe, and the continental landmass of
+        Afro-Eurasia with Africa and Europe.
+        Asia covers an area of 44,579,000 square kilometres (17,212,000 sq mi), about 30% of Earth's total land area and
+        8.7% of the Earth's total surface area.
+        The continent, which has long been home to the majority of the human population, was the site of many of the
+        first civilizations. Its 4.7 billion people constitutes roughly 60% of the world's population.
+        In general terms, Asia is bounded on the east by the Pacific Ocean, on the south by the Indian Ocean, and on the
+        north by the Arctic Ocean. The border of Asia with Europe is a historical and cultural construct, as there is no
+        clear physical and geographical separation between them.
+        It is somewhat arbitrary and has moved since its first conception in classical antiquity. The division of
+        Eurasia into two continents reflects East–West cultural, linguistic, and ethnic differences, some of which vary
+        on a spectrum rather than with a sharp dividing line.
+        A commonly accepted division places Asia to the east of the Suez Canal separating it from Africa; and to the
+        east of the Turkish Straits, the Ural Mountains and Ural River, and to the south of the Caucasus Mountains and
+        the Caspian and Black Seas, separating it from Europe. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Asia" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="AfricadescrDiv" class="container description">
+      <h5>Africa</h5>
+      <p class="descr-txt">
+        Africa is the world's second-largest and second-most populous continent, after Asia in both cases. At about 30.3
+        million km2 (11.7 million square miles) including adjacent islands, it covers 6% of Earth's total surface area
+        and 20% of its land area.
+        With 1.3 billion people as of 2018, it accounts for about 16% of the world's human population. Africa's
+        population is the youngest amongst all the continents; the median age in 2012 was 19.7, when the worldwide
+        median age was 30.4.
+        Despite a wide range of natural resources, Africa is the least wealthy continent per capita. Scholars have
+        attributed this to different factors including geography, climate, tribalism, colonialism, the Cold War,
+        neocolonialism, lack of democracy, and corruption.
+        Despite this low concentration of wealth, recent economic expansion and the large and young population make
+        Africa an important economic market in the broader global context.
+        The continent is surrounded by the Mediterranean Sea to the north, the Isthmus of Suez and the Red Sea to the
+        northeast, the Indian Ocean to the southeast and the Atlantic Ocean to the west. The continent includes
+        Madagascar and various archipelagos. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Africa" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="EngdescrDiv" class="container description">
+      <h5>English language</h5>
+      <p class="descr-txt">
+        English is a West Germanic language of the Indo-European language family, originally spoken by the inhabitants
+        of early medieval England. It is named after the Angles, one of the ancient Germanic peoples that migrated from
+        Anglia, a peninsula on the Baltic Sea, to the area of Great Britain later named after them: England.
+        The closest living relatives of English include Scots, followed by the Low Saxon and Frisian languages. While
+        English is genealogically West Germanic, its vocabulary is also distinctively influenced by Old Norman French
+        and Latin, as well as by Old Norse (a North Germanic language).
+        Speakers of English are called Anglophones.
+        English is the most spoken language in the world (if Chinese is divided into variants) and the third-most spoken
+        native language in the world, after Standard Chinese and Spanish. It is the most widely learned second language
+        and is either the official language or one of the official languages in 59 sovereign states.
+        There are more people who have learned English as a second language than there are native speakers. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/English_language" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="SpadescrDiv" class="container description">
+      <h5>Spanish language</h5>
+      <p class="descr-txt">
+        Spanish (español or castellano, lit. “Castilian”) is a Romance language of the Indo-European language family
+        that evolved from colloquial spoken Latin in the Iberian Peninsula of Europe. Today, it is a global language
+        with nearly 500 million native speakers, mainly in the Americas and Spain.
+        Spanish is the official language of 20 countries. It is the world's second-most spoken native language after
+        Mandarin Chinese; the world's fourth-most spoken language overall after English, Mandarin Chinese, and
+        Hindustani (Hindi-Urdu); and the world's most widely spoken Romance language. The largest population of native
+        speakers is in Mexico.<br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Spanish_language" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="PordescrDiv" class="container description">
+      <h5>Portugese language</h5>
+      <p class="descr-txt">
+        Portuguese is a western Romance language of the Indo-European language family, originating in the Iberian
+        Peninsula of Europe. It is the sole official language of Portugal, Brazil, Cape Verde, Angola, Mozambique,
+        Guinea-Bissau and São Tomé and Príncipe, while having co-official language status in East Timor, Equatorial
+        Guinea, and Macau.
+        A Portuguese-speaking person or nation is referred to as "Lusophone" (lusófono). As the result of expansion
+        during colonial times, a cultural presence of Portuguese speakers is also found around the world. Portuguese is
+        part of the Ibero-Romance group that evolved from several dialects of Vulgar Latin in the medieval Kingdom of
+        Galicia and the County of Portugal, and has kept some Celtic phonology in its lexicon.
+        With approximately 250 million native speakers and 24 million L2 speakers, Portuguese has approximately 274
+        million total speakers. It is usually listed as the sixth-most spoken language and the third-most spoken
+        European language in the world in terms of native speakers. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Portuguese_language" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="AradescrDiv" class="container description">
+      <h5>Arabic language</h5>
+      <p class="descr-txt">
+        Arabic (اَلْعَرَبِيَّةُ, al-ʿarabiyyah) is a Semitic language that first emerged in the 1st to 4th centuries CE.
+        It is the lingua franca of the Arab world and the liturgical language of Islam.
+        It is named after the Arabs, a term initially used to describe peoples living in the Arabian Peninsula bounded
+        by eastern Egypt in the west, Mesopotamia in the east, and the Anti-Lebanon mountains and northern Syria in the
+        north, as perceived by ancient Greek geographers.
+        The ISO assigns language codes to 32 varieties of Arabic, including its standard form, Modern Standard Arabic,
+        also referred to as Literary Arabic, which is modernized Classical Arabic. This distinction exists primarily
+        among Western linguists;
+        Arabic speakers themselves generally do not distinguish between Modern Standard Arabic and Classical Arabic, but
+        rather refer to both as al-ʿarabiyyatu l-fuṣḥā (اَلعَرَبِيَّةُ ٱلْفُصْحَىٰ, "the eloquent Arabic") or simply
+        al-fuṣḥā (اَلْفُصْحَىٰ).
+        Arabic is the liturgical language of more than 2 billion Muslims, and Arabic is one of six official languages of
+        the United Nations. All varieties of Arabic combined are spoken by perhaps as many as 422 million speakers
+        (native and non-native) in the Arab world, making it the fifth most spoken language in the world, and the fourth
+        most used language on the internet in terms of users. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Arabic_language" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="eurdescrDiv" class="container description">
+      <h5>Euro</h5>
+      <p class="descr-txt">
+        The euro (symbol: €; code: EUR) is the official currency of 19 of the 27 member states of the European Union.
+        This group of states is known as the eurozone or, officially, the euro area, and includes about 343 million
+        citizens as of 2019. The euro is divided into 100 cents.
+        The currency is also used officially by the institutions of the European Union, by four European microstates
+        that are not EU members, the British Overseas Territory of Akrotiri and Dhekelia, as well as unilaterally by
+        Montenegro and Kosovo.
+        Outside Europe, a number of special territories of EU members also use the euro as their currency. Additionally,
+        over 200 million people worldwide use currencies pegged to the euro.
+        The name euro was officially adopted on 16 December 1995 in Madrid. The euro was introduced to world financial
+        markets as an accounting currency on 1 January 1999, replacing the former European Currency Unit (ECU) at a
+        ratio of 1:1 (US$1.1743).
+        Physical euro coins and banknotes entered into circulation on 1 January 2002, making it the day-to-day operating
+        currency of its original members, and by March 2002 it had completely replaced the former currencies. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Euro" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="gbpdescrDiv" class="container description">
+      <h5>British pound sterling</h5>
+      <p class="descr-txt">
+        Sterling (ISO code GBP, abbreviation STG) is the official currency of the United Kingdom, Jersey, Guernsey, the
+        Isle of Man, Gibraltar, South Georgia and the South Sandwich Islands, the British Antarctic Territory, and
+        Tristan da Cunha.
+        Sterling is the world's oldest currency that is still in use and that has been in continuous use since its
+        inception. The pound (sign: £) is the main unit of sterling, and the currency itself may be referred to as pound
+        sterling, the British pound, or simply the pound when distinction from other currencies is unnecessary.
+        One pound sterling is subdivided into 100 pence sterling (singular: penny, abbreviated: p). Sterling is the
+        fourth most-traded currency in the foreign exchange market, after the United States dollar, the euro, and the
+        Japanese yen.
+        Together with those three currencies and the Chinese yuan, it forms the basket of currencies which calculate the
+        value of IMF special drawing rights. As of mid-2021, sterling is also the fourth most-held reserve currency in
+        global reserves. All these currencies are government-issued fiat currencies. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Pound_sterling" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="usddescrDiv" class="container description">
+      <h5>United States dollar</h5>
+      <p class="descr-txt">
+        The United States dollar (symbol: $; code: USD; also abbreviated US$ or U.S. Dollar, to distinguish it from
+        other dollar-denominated currencies; referred to as the dollar, U.S. dollar, American dollar, or colloquially
+        buck) is the official currency of the United States and several other countries.
+        The Coinage Act of 1792 introduced the U.S. dollar at par with the Spanish silver dollar, divided it into 100
+        cents, and authorized the minting of coins denominated in dollars and cents. U.S. banknotes are issued in the
+        form of Federal Reserve Notes, popularly called greenbacks due to their predominantly green color.
+        The monetary policy of the United States is conducted by the Federal Reserve System, which acts as the nation's
+        central bank.
+        The U.S. dollar became an important international reserve currency after the First World War, and displaced the
+        pound sterling as the world's primary reserve currency by the Bretton Woods Agreement towards the end of the
+        Second World War. The dollar is the most widely used currency in international transactions, and a free-floating
+        currency.
+        It is also the official currency in several countries and the de facto currency in many others, with Federal
+        Reserve Notes (and, in a few cases, U.S. coins) used in circulation. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/United_States_dollar" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="auddescrDiv" class="container description">
+      <h5>Australian dollar</h5>
+      <p class="descr-txt">
+        The Australian dollar (sign: $; code: AUD) is the currency of Australia, including its external territories:
+        Christmas Island, Cocos (Keeling) Islands, and Norfolk Island. It is officially used as currency by three
+        independent Pacific Island states: Kiribati, Nauru, and Tuvalu.
+        It is legal tender in Australia. Within Australia, it is almost always abbreviated with the dollar sign ($),
+        with A$ or AU$ sometimes used to distinguish it from other dollar-denominated currencies. The $ symbol precedes
+        the amount. It is subdivided into 100 cents.
+        The Australian dollar was introduced on 14 February 1966 to replace the pre-decimal Australian pound, with the
+        conversion rate of two dollars to the pound. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Australian_dollar" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="EUdescrDiv" class="container description">
+      <h5>European union</h5>
+      <p class="descr-txt">
+        The European Union (EU) is a political and economic union of 27 member states that are located primarily in
+        Europe. The union has a total area of 4,233,255.3 km2 (1,634,469.0 sq mi) and an estimated total population of
+        about 447 million.
+        An internal single market has been established through a standardised system of laws that apply in all member
+        states in those matters, and only those matters, where the states have agreed to act as one.
+        EU policies aim to ensure the free movement of people, goods, services and capital within the internal market;
+        enact legislation in justice and home affairs; and maintain common policies on trade, agriculture, fisheries and
+        regional development.
+        Passport controls have been abolished for travel within the Schengen Area. The eurozone is a monetary union
+        established in 1999, coming into full force in 2002, that is composed of the 19 EU member states that use the
+        euro currency.
+        The EU has often been described as a sui generis political entity (without precedent or comparison) with the
+        characteristics of either a federation or confederation.
+        The union and EU citizenship were established when the Maastricht Treaty came into force in 1993. The EU traces
+        its origins to the European Coal and Steel Community (ECSC) and the European Economic Community (EEC),
+        established, respectively, by the 1951 Treaty of Paris and 1957 Treaty of Rome. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/European_Union" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="EFTAdescrDiv" class="container description">
+      <h5>European Free Trade Agreement</h5>
+      <p class="descr-txt">
+        The European Free Trade Association (EFTA) is a regional trade organization and free trade area consisting of
+        four European states: Iceland, Liechtenstein, Norway and Switzerland. The organization operates in parallel with
+        the European Union (EU), and all four member states participate in the European Single Market and are part of
+        the Schengen Area.
+        They are not, however, party to the European Union Customs Union. EFTA was historically one of the two dominant
+        western European trade blocs, but is now much smaller and closely associated with its historical competitor, the
+        European Union. It was established on 3 May 1960 to serve as an alternative trade bloc for those European states
+        that were unable or unwilling to join the then European Economic Community (EEC), the main predecessor of the
+        EU.
+        The Stockholm Convention (1960), to establish the EFTA, was signed on 4 January 1960 in the Swedish capital by
+        seven countries (known as the "outer seven": Austria, Denmark, Norway, Portugal, Sweden, Switzerland and the
+        United Kingdom). A revised Convention, the Vaduz Convention, was signed on 21 June 2001 and entered into force
+        on 1 June 2002. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/European_Free_Trade_Association"
+            target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="CARICOMdescrDiv" class="container description">
+      <h5>Caribbean Community</h5>
+      <p class="descr-txt">
+        The Caribbean Community (CARICOM or CC) is an intergovernmental organization that is a political and economic
+        union of 15 member states (14 nation-states and one dependency) throughout the Caribbean having primary
+        objectives to promote economic integration and cooperation among its members, to ensure that the benefits of
+        integration are equitably shared, and to coordinate foreign policy.
+        The organisation was established in 1973 with the signing of the Treaty of Chaguaramas by its four founding
+        members. Its major activities involve coordinating economic policies and development planning; devising and
+        instituting special projects for the less-developed countries within its jurisdiction; operating as a regional
+        single market for many of its members (Caricom Single Market); and handling regional trade disputes.
+        The secretariat headquarters is in Georgetown, Guyana. CARICOM is an official United Nations Observer
+        beneficiary. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Caribbean_Community" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="PAdescrDiv" class="container description">
+      <h5>Pacific Alliance</h5>
+      <p class="descr-txt">
+        The Pacific Alliance is a Latin American trade bloc, formed by Chile, Colombia, Mexico and Peru, which all
+        border the Pacific Ocean. The alliance was formed with the express purpose of improving regional integration and
+        moving toward complete freedom in the movement of goods, services, capital and people between the four member
+        states.
+        Together, these four countries have a combined population of nearly 230 million people and make up roughly 35%
+        of Latin American GDP. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Pacific_Alliance" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="AUdescrDiv" class="container description">
+      <h5>African Union</h5>
+      <p class="descr-txt">
+        The African Union (AU) is a continental union consisting of 55 member states located on the continent of Africa.
+        The AU was announced in the Sirte Declaration in Sirte, Libya, on 9 September, 1999, calling for the
+        establishment of the African Union.
+        The bloc was founded on 26 May 2001 in Addis Ababa, Ethiopia, and launched on 9 July 2002 in Durban, South
+        Africa. The intention of the AU was to replace the Organisation of African Unity (OAU), established on 25 May
+        1963 in Addis Ababa by 32 signatory governments; the OAU was disbanded on 9 July 2002.
+        The most important decisions of the AU are made by the Assembly of the African Union, a semi-annual meeting of
+        the heads of state and government of its member states. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/African_Union" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="USANdescrDiv" class="container description">
+      <h5>Union of South American Nations</h5>
+      <p class="descr-txt">
+        The Union of South American Nations is an intergovernmental regional organization that once comprised twelve
+        South American countries; as of 2019, most have withdrawn. The UNASUR Constitutive Treaty was signed on 23 May
+        2008, at the Third Summit of Heads of State, held in Brasília, Brazil. According to the Constitutive Treaty, the
+        Union's headquarters will be located in Quito, Ecuador.
+        On 1 December 2010, Uruguay became the ninth state to ratify the UNASUR treaty, thus giving the union full
+        legality. As the Constitutive Treaty entered into force on 11 March 2011, UNASUR became a legal entity during a
+        meeting of Foreign Ministers in Mitad del Mundo, Ecuador, where they had laid the foundation stone for the
+        Secretariat Headquarters.
+        In April 2018, six countries—Argentina, Brazil, Chile, Colombia, Paraguay and Peru—suspended their membership,
+        and in August of the same year, Colombia announced its withdrawal from the organization. In March 2019, Brazil's
+        president Jair Bolsonaro announced his country's intention to withdraw from the organization. On 13 March 2019,
+        Ecuador announced that it will withdraw from the organization.
+        The president of the country, Lenin Moreno, also asked the bloc to return the headquarters building of the
+        organization, based in Quito. On 10 March 2020, Uruguay officially announced its withdrawal from the
+        organization. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Union_of_South_American_Nations"
+            target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="EEUdescrDiv" class="container description">
+      <h5>Eurasian Economic Union</h5>
+      <p class="descr-txt">
+        The Eurasian Economic Union (EAEU or EEU) is an economic union of some post-Soviet states located in Eurasia.
+        The Treaty on the Eurasian Economic Union was signed on 29 May 2014 by the leaders of Belarus, Kazakhstan, and
+        Russia, and came into force on 1 January 2015.
+        Treaties aiming for Armenia's and Kyrgyzstan's accession to the Eurasian Economic Union were signed on 9 October
+        and 23 December 2014, respectively. Armenia's accession treaty came into force on 2 January 2015. Kyrgyzstan's
+        accession treaty came into effect on 6 August 2015. Kyrgyzstan participated in the EAEU from the day of its
+        establishment as an acceding state. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Eurasian_Economic_Union" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="ASEANdescrDiv" class="container description">
+      <h5>Association of Southeast Asian Nations</h5>
+      <p class="descr-txt">
+        ASEAN officially the Association of Southeast Asian Nations, is a political and economic union of 10 member
+        states in Southeast Asia, which promotes intergovernmental cooperation and facilitates economic, political,
+        security, military, educational, and sociocultural integration between its members and countries in
+        Asia-Pacific.
+        ASEAN's primary objective was to accelerate economic growth and through that social progress and cultural
+        development. A secondary objective was to promote regional peace and stability based on the rule of law and the
+        principle of United Nations charter.
+        With some of the fastest growing economies in the world, ASEAN has broadened its objective beyond the economic
+        and social spheres. In 2003, ASEAN moved along the path of the European Union by agreeing to establish an ASEAN
+        community comprising three pillars: the ASEAN security community, the ASEAN economic community, and the ASEAN
+        socio-cultural community.
+        The ten stalks of rice in the ASEAN flag and insignia represent the ten southeast Asian countries bound together
+        in solidarity. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/ASEAN" target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="CAISdescrDiv" class="container description">
+      <h5>Central American Integration System</h5>
+      <p class="descr-txt">
+        The Central American Integration System has been the economic and political organization of Central American
+        states since 1 February 1993.
+        On 13 December 1991, the ODECA countries signed the Protocol of Tegucigalpa, extending earlier cooperation for
+        regional peace, political freedom, democracy and economic development. SICA's General Secretariat is in El
+        Salvador. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Central_American_Integration_System"
+            target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="CEFTAdescrDiv" class="container description">
+      <h5>Central European Free Trade Agreement</h5>
+      <p class="descr-txt">
+        The Central European Free Trade Agreement is an international trade agreement between countries mostly located
+        in Southeastern Europe. Founded by representatives of Poland, Hungary and Czechoslovakia,
+        CEFTA expanded to Albania, Bosnia and Herzegovina, Bulgaria, Croatia, Moldova, Montenegro, North Macedonia,
+        Romania, Serbia, Slovenia and the UNMIK (on behalf of Kosovo, in accordance with UNSCR 1244). <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/Central_European_Free_Trade_Agreement"
+            target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="NAFTAdescrDiv" class="container description">
+      <h5>North American Free Trade Agreement</h5>
+      <p class="descr-txt">
+        The North American Free Trade Agreement was an agreement signed by Canada, Mexico, and the United States that
+        created a trilateral trade bloc in North America.
+        The agreement came into force on January 1, 1994, and superseded the 1988 Canada–United States Free Trade
+        Agreement between the United States and Canada.
+        The NAFTA trade bloc formed one of the largest trade blocs in the world by gross domestic product. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement"
+            target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="SAARCdescrDiv" class="container description">
+      <h5>South Asian Association for Regional Cooperation</h5>
+      <p class="descr-txt">
+        The South Asian Association for Regional Cooperation (SAARC) is the regional intergovernmental organization and
+        geopolitical union of states in South Asia. Its member states are Afghanistan, Bangladesh, Bhutan, India,
+        Maldives, Nepal, Pakistan, and Sri Lanka.
+        SAARC comprises 3% of the world's land area, 21% of the world's population and 5.21% (USD 4.47 trillion) of the
+        global economy, as of 2021. SAARC was founded in Dhaka on 8 December 1985. Its secretariat is based in
+        Kathmandu, Nepal.
+        The organization promotes development of economic and regional integration. It launched the South Asian Free
+        Trade Area in 2006. SAARC maintains permanent diplomatic relations at the United Nations as an observer and has
+        developed links with multilateral entities, including the European Union. <br>
+        <em>source: <a href="https://en.wikipedia.org/wiki/South_Asian_Association_for_Regional_Cooperation"
+            target="_blank">wikipedia</a></em>
+      </p>
+    </div>
+
+    <div id="countryCard" class="card-group"></div>
+  </main>
+
+  <div id="modalBox" class="modal fade" tabindex="-1" aria-labelledby="modalBox" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-secondary">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-color: whitesmoke;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../countripedia/scripts/app.js"></script>
+</body>
+
+</html>
