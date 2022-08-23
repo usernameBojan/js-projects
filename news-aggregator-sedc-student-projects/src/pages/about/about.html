@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+  <link rel="stylesheet" href="../../assets/styles/global.css">
+  <link rel="stylesheet" href="../../assets/styles/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>About us</title>
+</head>
+
+<body>
+  <c-navbar></c-navbar>
+ 
+  <div class="container">
+
+    <aside id="category-sidebar">
+      <c-l-sidebar></c-l-sidebar>
+    </aside>
+
+
+    
+    <main class="main">
+
+      <h1 class="greet">About Newstopia </h1>
+
+      <div id="choice">
+        <a href="#" id="about" data-link data-title-nesto="About Newstopia">About us</a>
+        <a href="#" id="meet" data-link data-title-nesto="Our Team">Our team</a>
+        <a href="#" id="contact" data-link data-title-nesto="Contact us">Contact us</a>
+      </div>
+
+      <div class="section">
+
+        <div class="section-container">
+          <div class="columns image">
+            <img src="../../assets/images/team.jpg" alt="team" width="400px" height="300px">
+          </div>
+          <div class="columns content">
+            <div class="content-container">
+              <h2>Who we are</h2>
+              <p>
+                Everyone says it, but in our case it is true: our team is the secret to our success.
+                Each and every one of us is amazing in their own way, but together we make our job easier.
+                Our team is a talented group of people with outstanding offers for our clients, and it is a fun and
+                challenging place to work and develop a career as well.
+                We are very proud of the team and we have always been a team that sticks together,
+                with a shared vision and passion for helping ourselves to be the best we can be for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-container">
+          <div class="columns image">
+            <img src="../../assets/images/great-team.jpg" alt="team" width="400px" height="300px">
+          </div>
+          <div class="columns content">
+            <div class="content-container">
+              <h2>What we do ?</h2>
+              <p>
+                Front-end web development is the development of the graphical user interface of a website,
+                through the use of HTML, CSS, and JavaScript,
+                so that users can view and interact with that website.
+                We created website for news, the name is newstopia. Our team counts eleven members and the outcome is
+                excellent.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div id="team" class="section hide">
+
+      </div>
+
+      <div id="contact-section" class="section hide">
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text"> Do not hesitate to contact us </p>
+
+            <div class="info">
+              <div class="information">
+                <img src="../../assets/images/location.png" class="icon" alt="" />
+                <p>11th October St. 33a, Skopje 1000 MK</p>
+              </div>
+              <div class="information">
+                <img src="../../assets/images/email.png" class="icon" alt="" />
+                <p>sedcteam@hotmail.com</p>
+              </div>
+              <div class="information">
+                <img src="../../assets/images/mobile.png" class="icon" alt="" />
+                <p>088-234-789</p>
+              </div>
+            </div>
+
+            <div class="social-media">
+              <p>Connect with us </p>
+              <div class="social-icons">
+                <a href="#">
+                  <i class="fa fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter fa-2x"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram fa-2x"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          <form action="about-us.html" autocomplete="off" class="contact-form">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" placeholder="Username" />
+              <label for=""></label>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" placeholder="Email" />
+              <label for=""></label>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" placeholder="Phone" />
+              <label for=""></label>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" placeholder="Message"></textarea>
+              <label for=""></label>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <aside id="ads-sidebar">
+      <div id="container-sidebar">
+        <weather-widget></weather-widget>
+        <c-ads-sidebar></c-ads-sidebar>
+      </div>
+    </aside>
+  </div>
+
+  <c-footer></c-footer>
+
+  <script type="module" src="../../components/weather-widget/weather-widget.js"></script>
+  <script src="../../components/navbar/navbar.js"></script>
+  <script src="../../components/left-sidebar/left-sidebar.js"></script>
+  <script src="../../components/ads-sidebar/ads-sidebar.js"></script>
+  <script src=" ../../components/footer/footer.js"> </script>
+  <script src="./about.js"></script>
+</body>
+
+</html>

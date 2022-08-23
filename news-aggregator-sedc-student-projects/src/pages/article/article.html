@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Article</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+    <link rel="stylesheet" href="../../assets/styles/global.css">
+    <link rel="stylesheet" href="../../assets/styles/article-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <c-navbar></c-navbar>
+
+    <div class="container">
+        <aside id="category-sidebar">
+            <c-l-sidebar></c-l-sidebar>
+        </aside>
+
+        <main class="main">
+
+            <img alt="" id="article-img">
+            <div id="article-info">
+                <h1 id="article-title"></h1>
+                <div id="article-details">
+                    <p>Published : <b id="article-date"></b> </p>
+                    <p>Source : <a id="article-src" target="_blank" title="Click to open original article"></a></p>
+                </div>
+            </div>
+
+            <div id="article-txt"></div>
+
+            <img src="https://blog.hubspot.com/hubfs/How%20to%20Explain%20Banner%20Ads%20to%20Anyone-5.png" alt=""
+                id="ad-banner">
+
+            <div id="feedback">
+                <div id="rating">
+                    <h4>How do you feel about this article?</h4>
+                    <div id="rating-controllers">
+                        <div class="votes">
+                            <i id="up" class="fa fa-thumbs-up fa-3x thumbs" title="Like"></i>
+                            <span id="up-votes"></span>
+                        </div>
+                        <div class="votes">
+                            <i id="down" class="fa fa-thumbs-down fa-3x thumbs" title="Dislike"></i>
+                            <span id="down-votes"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Have some thoughts about this article? Share them with us below!</h3>
+                <p id="comment-error"></p>
+                <form id="comment-form" action="" method="dialog">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" class="input">
+                        </div>
+                        <div class="input-group">
+                            <label for="name">Last Name:</label>
+                            <input type="text" id="last-name" class="input">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" class="input">
+                        <small><em>Your email adress won't be published</em></small>
+                    </div>
+                    <p>Leave a comment:</p>
+                    <textarea name="comment" id="comment" cols="70" rows="7" maxlength="700" class="input"></textarea>
+                    <button id="submit-comment" type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="comments">
+                <div>
+                    <h3>Comments :</h3>
+                </div>
+                <div id="comments-container">
+
+                </div>
+            </div>
+
+            <div id="share-post">
+
+                <p>Share this post</p>
+
+                <div id="icons">
+                    <a target="_blank" 
+                        title="Share on Facebook" class="icons" id="fb-share">
+                        <i class="fa fa-facebook fa-3x"></i>
+                    </a>
+
+                    <a target="_blank" title="Share on Twitter"
+                        class="icons" id="twitter-share">
+                        <i class="fa fa-twitter fa-3x"></i>
+                    </a>
+
+                    <a target="_blank"
+                        title="Share on LinkedIn" class="icons" id="li-share">
+                        <i class="fa fa-linkedin fa-3x"></i>
+                    </a>
+
+                </div>
+            </div>
+        </main>
+
+        <aside id="ads-sidebar">
+            <div id="container-sidebar">
+                <weather-widget></weather-widget>
+                <c-ads-sidebar></c-ads-sidebar>
+            </div>
+        </aside>
+
+    </div>
+
+    <c-footer></c-footer>
+
+    <script type="module" src="../../components/weather-widget/weather-widget.js"></script>
+    <script src="../../components/navbar/navbar.js"></script>
+    <script src="../../components/left-sidebar/left-sidebar.js"></script>
+    <script src="../../components/ads-sidebar/ads-sidebar.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+    <!-- <script src="../../components/search/searchFunc.js"></script> -->
+    <script type="module" src="./article.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+}
+button {
+   cursor: pointer;
+}
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+header {
+   width: 100vw;
+   height: 70px;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 100;
+}
+
+nav {
+   padding: 15px 35px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   background-color: var(--primary-color);
+   box-shadow: 0px 0px 5px 0px;
+}
+
+.hamburger {
+   height: 40px;
+   left: 20px;
+   vertical-align: middle;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   cursor: pointer;
+}
+
+#navbar img {
+   width: 160px;
+   padding-left: 15px;
+}
+
+.hamburger .line {
+   height: 3px;
+   width: 35px;
+   background-color: white;
+   transition: transform 300ms linear, opacity 300ms linear;
+}
+
+.hamburger-active .line-top {
+   transform: rotate(-45deg) translate(-9px, 10px);
+}
+.hamburger-active .line-middle {
+   opacity: 0;
+}
+.hamburger-active .line-bottom {
+   transform: rotate(45deg) translate(-9px, -10px);
+}
+
+#searchbar {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: none;
+   z-index: 5;
+}
+
+#searchbar .icon-close {
+   width: 70px;
+}
+
+#searchbar form {
+   width: 100%;
+   display: flex;
+}
+
+#searchbar input {
+   height: 100%;
+   flex-grow: 1;
+   text-indent: 30px;
+   font-size: 24px;
+}
+#searchbar form button {
+   width: 70px;
+}
+
+.btn-transparent {
+   background-color: transparent;
+   border: none;
+}
+
+input[type="search"] {
+   -webkit-appearance: textfield;
+}
+
+#user-options {
+   position: fixed;
+   padding-top: 50px;
+   right: 0;
+   top: 70px;
+   background-color: var(--primary-color);
+   width: 100%;
+   height: calc(100vh - 70px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   border-top: 2px solid var(--secondary-color);
+   gap: 50px;
+   transform: translateX(100%);
+   transition: transform 300ms ease;
+}
+
+.btn {
+   width: 50%;
+   text-align: center;
+   padding: 20px 0;
+   border-radius: 10px;
+   font-size: 24px;
+   letter-spacing: 2px;
+   cursor: pointer;
+   font-weight: 300;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   gap: 10px;
+   position: relative;
+}
+
+#login::after,
+#signup::after {
+   position: absolute;
+   top: -21px;
+   left: 10px;
+   color: #fafafa;
+   font-size: 16px;
+   font-weight: 200;
+}
+
+#login::after {
+   content: 'Already have an account?';
+}
+#signup::after {
+   content: 'Welcome new Users!';
+}
+
+.btn i {
+   margin: 0;
+   padding: 0;
+}
+
+.btn-primary {
+   background-color: white;
+   color: var(--primary-color);
+}
+
+.btn-secondary {
+   background-color: #f7473e;
+   color: #fff;
+}
+#togglers button {
+   margin: 0 10px;
+}
+
+@media screen and (min-width: 992px) {
+   #login::after,
+   #signup::after {
+      display: none;
+   }
+
+   nav {
+      justify-content: space-around;
+   }
+   #togglers {
+      display: none;
+   }
+   .hamburger {
+      display: none;
+   }
+
+   #navbar img{
+      width: 260px;
+   }
+
+   #searchbar {
+      display: block;
+      position: static;
+      width: 40%;
+   }
+   #searchbar input {
+      border-radius: 50px;
+      border: none;
+      height: 50px;
+   }
+
+   #searchbar input:focus {
+      outline: 2px solid var(--secondary-color);
+   }
+
+   #searchbar form {
+      position: relative;
+   }
+   #searchbar form button {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      right: 20px;
+      top: 10px;
+   }
+   #searchbar #close-searchbar {
+      display: none;
+   }
+
+   #user-options {
+      position: static;
+      transform: none;
+      height: fit-content;
+      width: fit-content;
+      padding-top: 0;
+      border: none;
+      display: flex;
+      flex-direction: row;
+   }
+
+   .btn {
+      width: 130px;
+      padding: 10px 20px;
+      display: flex;
+      position: relative;
+   }
+
+   .btn::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      transform: scaleX(0);
+      transition: transform 200ms ease-in;
+      transform-origin: right;
+   }
+   .btn:hover::before {
+      transform: scaleX(100%);
+      transform-origin: left;
+   }
+}
+
+.icon {
+   display: block;
+   mask-size: contain;
+   mask-repeat: no-repeat;
+   -webkit-mask-size: contain;
+   -webkit-mask-repeat: no-repeat;
+   width: 30px;
+   height: 30px;
+   margin: 0 25%;
+}
+
+.icon-close {
+   mask-image: url("../../assets/icons/x-lg.svg");
+   -webkit-mask-image: url("../../assets/icons/x-lg.svg");
+}
+.icon-search {
+   mask-image: url("../../assets/icons/search-icon.svg");
+   -webkit-mask-image: url("../../assets/icons/search-icon.svg");
+}
+.icon-user {
+   mask-image: url("../../assets/icons/people-fill.svg");
+   -webkit-mask-image: url("../../assets/icons/people-fill.svg");
+}
+.icon-login {
+   mask-image: url("../../assets/icons/person-fill.svg");
+   -webkit-mask-image: url("../../assets/icons/person-fill.svg");
+}
+.icon-signup {
+   mask-image: url("../../assets/icons/person-plus-fill.svg");
+   -webkit-mask-image: url("../../assets/icons/person-plus-fill.svg");
+}
+.icon-black {
+   background-color: #000;
+}
+.icon-white {
+   background-color: #fff;
+}
+.icon-blue {
+   background-color: var(--primary-color);
+}

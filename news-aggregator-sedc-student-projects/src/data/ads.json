@@ -1,0 +1,64 @@
+{
+    "ads": [
+        {
+            "id": "1",
+            "alt_text": "New HBO Max is here",
+            "redirect_url": "https://www.hbomax.com/mk/en?gclid=CjwKCAjwquWVBhBrEiwAt1KmwpqCWI_yIWuu2UYHoaY4g2f_kMmp0lh85zRiaAADxLHH4rI0aXZI2hoCYUgQAvD_BwE&gclsrc=aw.ds",
+            "image_url": "https://overstandard.dk/wp-content/uploads/2020/12/5-5.jpg"
+        },
+        {
+            "id": "2",
+            "alt_text": "Hero Wars - Play now in your Browser",
+            "redirect_url": "https://www.hero-wars.com",
+            "image_url": "https://i1.wp.com/playerassist.com/wp-content/uploads/2021/08/Hero-Wars-How-to-Beat-Path-of-Madness.jpg?w=600&ssl=1"
+        },
+        {
+            "id": "3",
+            "alt_text": "Netflix",
+            "redirect_url": "https://www.netflix.com/mk/",
+            "image_url": "https://www.somagnews.com/wp-content/uploads/2021/12/Netflix-1.jpg"
+        },
+        {
+            "id": "4",
+            "alt_text": "Nike - Just Do It",
+            "redirect_url": "https://www.nike.com/ro/",
+            "image_url": "https://www.vernacular.co.nz/wp-content/uploads/2018/02/nike_justdoit_00.jpg"
+        },
+        {
+            "id": "5",
+            "alt_text": "The School of Calisthenics",
+            "redirect_url": "https://www.thenx.com",
+            "image_url": "https://yt3.ggpht.com/ytc/AKedOLSDpNFLifg1epUS-Z8CNsFAtk4l296hNE676sl7PQ=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "id": "6",
+            "alt_text": "Grouper",
+            "redirect_url": "https://grouper.mk",
+            "image_url": "https://usb.mk/wp-content/uploads/2020/07/Grouper-AppGallery-1200x628.png"
+        },
+        {
+            "id": "7",
+            "alt_text": "Coca - Cola",
+            "redirect_url": "https://www.coca-cola.com",
+            "image_url": "https://www.pcclean.io/wp-content/uploads/2021/12/5724671936596872519.jpg"
+        },
+        {
+            "id": "8",
+            "alt_text": "Best Pizza Ever, only in Jakomo",
+            "redirect_url": "https://pizzajakomo.com",
+            "image_url": "https://korpa.ba/restaurant_uploads/1sAK4p2oDH9Gu8ZklaTW5pCuQI1ZxxCp.jpg"
+        },
+        {
+            "id": "9",
+            "alt_text": "HealthBuddy - Your very own buddy for info about COVID-19",
+            "redirect_url": "https://healthbuddy.plus/index",
+            "image_url": "https://i.ytimg.com/vi/TkHxyR75vZE/mqdefault.jpg"
+        },
+        {
+            "id": "10",
+            "alt_text": "SKITTLES: Taste the Rainbow",
+            "redirect_url": "https://www.skittles.com",
+            "image_url": "https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/815/cached.offlinehbpl.hbpl.co.uk/news/OMC/48582768-0C86-0EE5-633B9C08F88ACDDB.jpg"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+#weather {
+   background-color: var(--secondary-color);
+   color: white;
+   height: 13%;
+   padding: 2.5px;
+   border-radius: 20px;
+   width: 90%;
+   margin: 15px auto;
+}

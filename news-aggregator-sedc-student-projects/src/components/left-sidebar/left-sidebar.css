@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+}
+
+.navigation {
+   padding: 20px 20px 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 40px;
+   width: 100%;
+   background-color: var(--primary-color);
+   height: calc(100vh - 70px);
+}
+
+.navigation h2 {
+   font-size: 24px;
+   font-weight: 400;
+   letter-spacing: 3px;
+}
+
+.categories {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+   gap: 20px;
+   padding-left: 30px;
+}
+
+.categories li {
+   padding-left: 8px;
+   border-left: 1px solid #fff;
+   cursor: pointer;
+}
+.categories li a {
+   color: #fff;
+   font-size: 20px;
+   font-weight: 200;
+   letter-spacing: 2px;
+}
+
+.archive-and-feedback {
+   margin-top: auto;
+}
+.archive-and-feedback p {
+   margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 992px) {
+   .navigation {
+      position: sticky;
+      top: 70px;
+      transform: none;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 50px;
+      width: 100%;
+      background-color: var(--background-lightGrey);
+   }
+
+   .navigation h2 {
+      text-align: left;
+   }
+   .categories {
+      width: 70%;
+   }
+
+   .categories li {
+      width: 100%;
+      position: relative;
+      border-left: 2px solid var(--primary-color);
+      transition: transform 250ms ease-in;
+   }
+
+   .categories li::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color);
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+   }
+   .categories li:hover {
+      transform: translateX(20px);
+   }
+
+   .categories li:hover::before {
+      transform: scaleX(100%);
+      transform-origin: left;
+   }
+
+   .categories li a {
+      color: #000;
+      font-size: 22px;
+      letter-spacing: 3px;
+      font-weight: 300;
+   }
+}

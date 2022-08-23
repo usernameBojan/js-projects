@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+    <link rel="stylesheet" href="../../assets/styles/global.css">
+    <link rel="stylesheet" href="../../assets/styles/feedback.css">
+</head>
+
+<body>
+    <c-navbar></c-navbar>
+
+    <div class="container">
+
+        <aside id="category-sidebar">
+            <c-l-sidebar></c-l-sidebar>
+        </aside>
+        
+        <main class="main">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <h3>Give us your feedback</h3>
+                    <div class="form-inputs">
+                        <label for="Name">Name</label>
+                        <input type="text" placeholder="Name" required>
+                    </div>
+
+                    <div class="form-inputs">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-inputs">
+                        <label for="Email">Email</label>
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="form-inputs">
+                        <label for="Feedback">Enter your message</label>
+                        <textarea name="" id="" cols="24" rows="10" placeholder="Your message here"></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Submit" id="button">
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <aside id="ads-sidebar">
+            <div id="container-sidebar">
+                <weather-widget></weather-widget>
+                <c-ads-sidebar></c-ads-sidebar>
+            </div>
+        </aside>
+        
+    </div>
+
+    <c-footer></c-footer>
+
+
+    <script src="../../components/navbar/navbar.js"></script>
+    <script src="../../components/left-sidebar/left-sidebar.js"></script>
+    <script src="../../components/ads-sidebar/ads-sidebar.js"></script>
+    <script src=" ../../components/footer/footer.js"> </script>
+    <script type="module" src="../../components/weather-widget/weather-widget.js"></script>
+    <script src="feedback.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+#main-article {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-bottom: 2px solid #f3f3f3;
+   padding-bottom: 20px;
+}
+#main-article .btn-link {
+   width: 50%;
+   text-align: center;
+}
+
+#main-article div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   justify-content: center;
+}
+
+#main-article img {
+   width: 100%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+*/ #articles {
+   display: flex;
+   flex-flow: column nowrap;
+   padding: 75px;
+}
+
+#articles {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.news {
+   display: flex;
+   height: 200px;
+   justify-content: center;
+   align-items: flex-end;
+}
+
+.news img {
+   width: 140px;
+   height: 140px;
+   padding-right: 10px;
+}
+
+.article-title {
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   margin-bottom: 10px;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 18px;
+   line-height: 16.6px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+   text-indent: 5px;
+}
+.content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   flex-grow: 1;
+}
+
+.content p {
+   font-size: 16px;
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   margin-bottom: 10px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   line-height: 17.5px;
+}
+.btn-link {
+   width: fit-content;
+   text-decoration: none;
+   background-color: var(--primary-color);
+   padding: 10px 20px;
+   border-radius: 5px;
+   color: #fff;
+}
+.pagination {
+   display: inline-block;
+   align-self: center;
+   margin-top: 25px;
+   padding: 10px;
+}
+.pagination button {
+   color: black;
+   float: left;
+   padding: 8px 16px;
+   text-decoration: none;
+   cursor: pointer;
+   border: none;
+   background-color: transparent;
+}
+.pagination button.active {
+   background-color: var(--secondary-color);
+   color: white;
+   border-radius: 5px;
+}
+.pagination button:hover {
+   background-color: #ddd;
+   border-radius: 5px;
+}
+@media screen and (min-width: 992px) {
+   .news {
+      display: flex;
+      margin: 10px 5px;
+      position: relative;
+      justify-content: center;
+      align-self: auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
+   }
+   .news img {
+      width: 200px;
+      padding-right: 10px;
+   }
+   .content p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      letter-spacing: 1.8px;
+      line-height: 21px;
+      font-weight: 300;
+   }
+   #main-article {
+      padding: 20px 40px;
+   }
+
+   #main-article img {
+      height: 500px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   #main-article h3 {
+      font-size: 24px;
+      letter-spacing: 3px;
+      font-weight: 800;
+   }
+   #main-article .btn-link {
+      width: 30%;
+   }
+}
